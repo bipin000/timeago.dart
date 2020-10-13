@@ -1,43 +1,43 @@
 import 'package:timeago/src/messages/lookupmessages.dart';
 
-/// Spanish Messages
-class EsMessages implements LookupMessages {
+/// Catalan Messages
+class CaMessages implements LookupMessages {
   @override
-  String prefixAgo() => 'hace';
+  String prefixAgo() => 'fa';
   @override
-  String prefixFromNow() => 'dentro de';
+  String prefixFromNow() => "d'aquí a";
   @override
   String suffixAgo() => '';
   @override
   String suffixFromNow() => '';
   @override
-  String lessThanOneMinute(int seconds) => 'un momento';
+  String lessThanOneMinute(int seconds) => 'un moment';
   @override
-  String aboutAMinute(int minutes) => 'un minuto';
+  String aboutAMinute(int minutes) => 'un minut';
   @override
-  String minutes(int minutes) => '$minutes minutos';
+  String minutes(int minutes) => '$minutes minuts';
   @override
   String aboutAnHour(int minutes) => 'una hora';
   @override
-  String hours(int hours) => '$hours horas';
+  String hours(int hours) => '$hours hores';
   @override
-  String aDay(int hours) => 'un día';
+  String aDay(int hours) => 'un dia';
   @override
-  String days(int days) => '$days días';
+  String days(int days) => '$days dies';
   @override
   String aboutAMonth(int days) => 'un mes';
   @override
-  String months(int months) => '$months meses';
+  String months(int months) => '$months mesos';
   @override
-  String aboutAYear(int year) => 'un año';
+  String aboutAYear(int year) => 'un any';
   @override
-  String years(int years) => '$years años';
+  String years(int years) => '$years anys';
   @override
   String wordSeparator() => ' ';
 }
 
-/// Spanish short Messages
-class EsShortMessages implements LookupMessages {
+/// Catalan short Messages
+class CaShortMessages implements LookupMessages {
   @override
   String prefixAgo() => '';
   @override
@@ -47,7 +47,7 @@ class EsShortMessages implements LookupMessages {
   @override
   String suffixFromNow() => '';
   @override
-  String lessThanOneMinute(int seconds) => 'ahora';
+  String lessThanOneMinute(int seconds) => 'ara';
   @override
   String aboutAMinute(int minutes) => '1 min';
   @override
@@ -57,17 +57,17 @@ class EsShortMessages implements LookupMessages {
   @override
   String hours(int hours) => '$hours hr';
   @override
-  String aDay(int hours) => '~1 día';
+  String aDay(int hours) => '~1 dia';
   @override
-  String days(int days) => '$days días';
+  String days(int days) => '$days dies';
   @override
   String aboutAMonth(int days) => '~1 mes';
   @override
-  String months(int months) => '$months meses';
+  String months(int months) => '$months mesos';
   @override
-  String aboutAYear(int year) => '~1 año';
+  String aboutAYear(int year) => '~1 any';
   @override
-  String years(int years) => '$years años';
+  String years(int years) => '$years anys';
   @override
   String wordSeparator() => ' ';
 }

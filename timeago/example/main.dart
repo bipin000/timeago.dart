@@ -13,9 +13,18 @@ main() async {
   timeago.setLocaleMessages('dv_short', timeago.DvShortMessages());
   timeago.setLocaleMessages('fr', timeago.FrMessages());
   timeago.setLocaleMessages('fr_short', timeago.FrShortMessages());
+  timeago.setLocaleMessages('gr', timeago.GrMessages());
+  timeago.setLocaleMessages('gr_short', timeago.GrShortMessages());
+  timeago.setLocaleMessages('ca', timeago.CaMessages());
+  timeago.setLocaleMessages('ca_short', timeago.CaShortMessages());
+  timeago.setLocaleMessages('cs', timeago.CsMessages());
+  timeago.setLocaleMessages('cs_short', timeago.CsShortMessages());
+  timeago.setLocaleMessages('hi', timeago.HiMessages());
+  timeago.setLocaleMessages('hi_short', timeago.HiShortMessages());
   timeago.setLocaleMessages('ja', timeago.JaMessages());
   timeago.setLocaleMessages('km', timeago.KmMessages());
   timeago.setLocaleMessages('km_short', timeago.KmShortMessages());
+  timeago.setLocaleMessages('ko', timeago.KoMessages());
   timeago.setLocaleMessages('id', timeago.IdMessages());
   timeago.setLocaleMessages('pt_BR', timeago.PtBrMessages());
   timeago.setLocaleMessages('pt_BR_short', timeago.PtBrShortMessages());
@@ -29,6 +38,8 @@ main() async {
   timeago.setLocaleMessages('pl', timeago.PlMessages());
   timeago.setLocaleMessages('th', timeago.ThMessages());
   timeago.setLocaleMessages('th_short', timeago.ThShortMessages());
+  timeago.setLocaleMessages('ms_MY', timeago.MsMyMessages());
+  timeago.setLocaleMessages('ms_MY_short', timeago.MsMyShortMessages());
   timeago.setLocaleMessages('nb_NO', timeago.NbNoMessages());
   timeago.setLocaleMessages('nb_NO_short', timeago.NbNoShortMessages());
   timeago.setLocaleMessages('nn_NO', timeago.NnNoMessages());
@@ -40,6 +51,7 @@ main() async {
   timeago.setLocaleMessages('ko', timeago.KoMessages());
   timeago.setLocaleMessages('vi', timeago.ViMessages());
   timeago.setLocaleMessages('vi_short', timeago.ViShortMessages());
+  timeago.setLocaleMessages('tr', timeago.TrMessages());
   timeago.setLocaleMessages('ta', timeago.TaMessages());
   timeago.setLocaleMessages('ro', timeago.RoMessages());
   timeago.setLocaleMessages('ro_short', timeago.RoShortMessages());
@@ -51,7 +63,8 @@ main() async {
   final updateMainContainer = () {
     final now = new DateTime.now();
     final difference = now.difference(loadedTime);
-    mainContainer.text = timeago.format(now.subtract(difference), locale: locale);
+    mainContainer.text =
+        timeago.format(now.subtract(difference), locale: locale);
   };
 
   querySelectorAll(".locale-link").onClick.listen((event) async {
@@ -76,18 +89,29 @@ addItem(String text) {
 
 createListItems() {
   final currentTime = new DateTime.now();
-  addItem(
-      timeago.format(currentTime.subtract(new Duration(microseconds: 1 * 44 * 1000)), locale: locale));
-  addItem(timeago.format(currentTime.subtract(new Duration(minutes: 1)), locale: locale));
-  addItem(timeago.format(currentTime.subtract(new Duration(minutes: 5)), locale: locale));
-  addItem(timeago.format(currentTime.subtract(new Duration(minutes: 50)), locale: locale));
-  addItem(timeago.format(currentTime.subtract(new Duration(hours: 5)), locale: locale));
-  addItem(timeago.format(currentTime.subtract(new Duration(days: 1)), locale: locale));
-  addItem(timeago.format(currentTime.subtract(new Duration(days: 5)), locale: locale));
-  addItem(timeago.format(currentTime.subtract(new Duration(days: 30)), locale: locale));
-  addItem(timeago.format(currentTime.subtract(new Duration(days: 30 * 5)), locale: locale));
-  addItem(timeago.format(currentTime.subtract(new Duration(days: 365)), locale: locale));
-  addItem(timeago.format(currentTime.subtract(new Duration(days: 365 * 5)), locale: locale));
+  addItem(timeago.format(
+      currentTime.subtract(new Duration(microseconds: 1 * 44 * 1000)),
+      locale: locale));
+  addItem(timeago.format(currentTime.subtract(new Duration(minutes: 1)),
+      locale: locale));
+  addItem(timeago.format(currentTime.subtract(new Duration(minutes: 5)),
+      locale: locale));
+  addItem(timeago.format(currentTime.subtract(new Duration(minutes: 50)),
+      locale: locale));
+  addItem(timeago.format(currentTime.subtract(new Duration(hours: 5)),
+      locale: locale));
+  addItem(timeago.format(currentTime.subtract(new Duration(days: 1)),
+      locale: locale));
+  addItem(timeago.format(currentTime.subtract(new Duration(days: 5)),
+      locale: locale));
+  addItem(timeago.format(currentTime.subtract(new Duration(days: 30)),
+      locale: locale));
+  addItem(timeago.format(currentTime.subtract(new Duration(days: 30 * 5)),
+      locale: locale));
+  addItem(timeago.format(currentTime.subtract(new Duration(days: 365)),
+      locale: locale));
+  addItem(timeago.format(currentTime.subtract(new Duration(days: 365 * 5)),
+      locale: locale));
 
   addItem("-");
 
